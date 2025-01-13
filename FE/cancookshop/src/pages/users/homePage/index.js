@@ -1,6 +1,10 @@
 import { memo } from "react"
-const HomePages = () => {
-    return <h1>ALO HOMe</h1>;
-};
+const HomePage = () => {
+    return (
+        <div>
+            <h1>Alo</h1>
+        </div>
+    )
+}
 
-export default memo(HomePages);
+export default memo(HomePage);
