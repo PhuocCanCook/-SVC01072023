@@ -1,0 +1,19 @@
+// THẰNG NÀY ĐỂ SỬA
+@use "sass:map";
+@import "./theme";
+
+
+* {
+    font-family: Roboto;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1170px;
+    width: 100%;
+    padding-left: 15;
+    padding-right: 15;
+    // background: map.get($theme-colors, "main");
+    margin: auto;
+}
