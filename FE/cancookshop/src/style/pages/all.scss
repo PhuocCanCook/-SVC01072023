@@ -2,7 +2,6 @@
 @use "sass:map";
 @import "./theme";
 
-
 * {
     font-family: Roboto;
     margin: 0;
@@ -10,10 +9,19 @@
 }
 
 .container {
-    max-width: 1170px;
+    max-width: 1300px;
     width: 100%;
     padding-left: 15;
     padding-right: 15;
-    // background: map.get($theme-colors, "main");
     margin: auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap; //kéo dài thì tự động dãn ra
+}
+
+.col_6 {
+    flex: 0 0 50%;
+    max-width: 50%;
 }
