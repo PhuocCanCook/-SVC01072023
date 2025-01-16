@@ -1,7 +1,10 @@
 export const ROUTER = {
     USER: {
-        HOME: "",
-        PROFILE: "thong-tin-ca-nhan"
+        HOME: "trang-chu",
+        PROFILE: "thong-tin-ca-nhan",
+        PRODUCTS: "san-pham",
+        BLOGS: "bai-viet",
+        HOSTLINE: "lien-he",
     },
 };
 //nơi chứa đường dẫn
