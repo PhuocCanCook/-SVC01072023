@@ -7,6 +7,8 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-icons": "^5.4.0",
+    "react-multi-carousel": "^2.8.5",
+    "react-multi-select-component": "^4.3.4",
     "react-router-dom": "^7.1.1",
     "react-scripts": "5.0.1",
     "sass": "^1.83.1",
