@@ -7,6 +7,7 @@
     font-family: Roboto;
     margin: 0;
     padding: 0;
+    list-style: none;
 }
 
 .container {
@@ -22,6 +23,12 @@
     flex-wrap: wrap; //kéo dài thì tự động dãn ra
 }
 
+.col-lg-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+    padding: 5px 0;
+}
+
 .col_6 {
     flex: 0 0 50%;
     max-width: 50%;
@@ -31,7 +38,7 @@
     .col_xl_3 {
         flex: 0 0 25%;
         max-width: 25%;
-        color: rgb(11, 243, 81);
+        color: rgb(2, 54, 18);
     }
 }
 
@@ -39,13 +46,18 @@
     flex: 0 0 50%;
     max-width: 50%;
     color: rgb(60, 25, 185);
+}
 
+.col_lg_9 {
+    flex: 0 0 75%;
+    max-width: 75%;
 }
 
 @include Responsive($MEDIUM_DEVICE) {
     .col_lg_3 {
         flex: 0 0 25%;
         max-width: 25%;
-        color: red;
+        color: rgb(232, 14, 14);
+        background-color: red;
     }
 }

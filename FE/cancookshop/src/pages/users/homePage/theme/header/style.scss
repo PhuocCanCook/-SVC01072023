@@ -20,27 +20,29 @@
             font-size: 16px;
             color: rgb(33, 153, 252);
         }
-    }
 
-    li {
-        cursor: pointer;
-        margin-left: 10px;
-
-
-        span {
-
+        li {
+            cursor: pointer;
             margin-left: 10px;
-            font-size: 13px;
+
+            span {
+                margin-left: 10px;
+                font-size: 13px;
+            }
+        }
+
+        svg {
+            color: var(--main);
+        }
+
+        strong {
+            color: var(--main);
 
         }
     }
 
-    svg {
-        color: var(--main);
-    }
 
 }
-
 
 .header__top_left {
     display: flex;
@@ -50,22 +52,20 @@
         display: flex;
         list-style: none;
         column-gap: 2px;
+
+        li {
+            margin-right: 10px;
+            color: var(--main);
+            font-size: 16px;
+            align-items: center;
+
+        }
     }
-
-    li {
-        margin-right: 10px;
-        color: var(--main);
-        font-size: 16px;
-        align-items: center;
-
-    }
-
-
 }
 
-.header_logo {}
-
-;
+.header_logo {
+    padding: 2px
+}
 
 .header_cart {
     display: flex;
@@ -73,38 +73,44 @@
     align-items: center;
     justify-content: center;
 
+    .header_wallet {
+        .wallet {
+            margin-left: 40px;
+        }
+    }
+
     ul {
         display: flex;
         list-style: none;
-        margin-left: 20px;
+        margin-left: 10px;
         margin-top: 10px;
         position: relative;
-    }
 
-    svg {
-        color: var(--main);
-        font-size: 25px;
-    }
+        svg {
+            color: var(--main);
+            font-size: 25px;
+        }
 
-    span {
-        display: inline-block;
-        background-color: var(--text);
-        color: rgb(255, 255, 255);
-        position: absolute;
-        // padding: 10px 15px;
-        border-radius: 5px;
-        font-size: 16px;
-        font-weight: bold;
-        text-align: center;
-        // Kích thước tối thiểu để đảm bảo nền không quá nhỏ
-        min-width: 20px;
-        // Mở rộng dựa trên số lượng chữ số
-        width: fit-content;
-        left: 20px;
-    }
+        span {
+            display: inline-block;
+            background-color: var(--text);
+            color: rgb(255, 255, 255);
+            position: absolute;
+            // padding: 10px 15px;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            // Kích thước tối thiểu để đảm bảo nền không quá nhỏ
+            min-width: 20px;
+            // Mở rộng dựa trên số lượng chữ số
+            width: fit-content;
+            left: 30px;
+        }
 
-    li {
-        margin-left: 10px;
+        li {
+            margin-left: 10px;
+        }
     }
 }
 
@@ -116,26 +122,234 @@
         display: flex;
         justify-content: space-between;
 
-    }
+        li {
+            text-align: center;
+            list-style: none;
+            position: relative;
 
-    li {
-        text-align: center;
-        list-style: none;
+            a {
+                color: var(--main);
+                text-decoration: none;
+                text-transform: uppercase;
+                font-weight: bold;
+                letter-spacing: 2px;
+                transition: all 0.4s;
+                display: block;
+                padding: 5px 0;
+            }
+        }
 
+        li:hover .header__menu__dropdown {
+            opacity: 1;
+            visibility: visible;
+        }
 
-        a {
-            color: var(--main);
-            text-decoration: none;
-            text-transform: uppercase;
-            font-weight: bold;
-            letter-spacing: 2px;
-            transition: all 0.4s;
+        .active a {
+            color: var(--text)
+        }
+
+        .header__menu__dropdown {
             display: block;
+            background-color: #15a350;
+            position: absolute;
+            width: 120px;
+            font-weight: 500;
             padding: 5px 0;
+            transition: all 0.3s;
+            opacity: 0;
+            visibility: hidden;
+
+
+            li {
+                a {
+                    text-transform: capitalize;
+                    color: #f5f5f5;
+                    font-weight: 400px;
+                    padding: 5px 10px;
+                    width: 100px;
+                }
+
+                :hover {
+                    color: #f5f5f5;
+                    background-color: var(--dropdown);
+                    box-shadow: 0 0 3px rgba(3, 56, 36, 0.5);
+                }
+            }
+        }
+    }
+}
+
+.hero__categories {
+    position: relative;
+
+    .hero__categories__all {
+        background-color: var(--dropdown);
+        padding: 8px 25px 5px 40px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        svg,
+        span {
+            font-size: 22px;
+            color: #f5f5f5;
+            margin-right: 9px;
+            font-weight: 700;
         }
     }
 
-    .active a {
-        color: rgb(2, 65, 35);
+    ul {
+        position: absolute;
+        opacity: 1;
+        width: 99%;
+        border: 1px solid #ebebeb;
+        background: #f5f5f5;
+        transition: all 0.3s;
+
+        li {
+            &:hover {
+                background: #ccc7c7;
+                cursor: pointer;
+            }
+
+            a {
+                color: var(--text);
+                text-decoration: none;
+                background-color: transparent;
+                font-size: 16px;
+                line-height: 39px;
+                padding-left: 40px;
+            }
+        }
+
+        &.hidden {
+            opacity: 0;
+
+        }
+    }
+
+
+}
+
+.hero__search__container {
+    .hero__search {
+        // background-color: red;
+        margin-left: 24px;
+        display: flex;
+
+        .hero__search__form {
+            button {
+                padding: 8px 10px;
+                font-size: 16px;
+                border: 2px solid #075a19;
+                border-radius: 5px;
+                outline: none;
+                transition: all 0.2s ease-in-out;
+                font-weight: 600;
+                cursor: pointer;
+                background-color: #075a19;
+                color: #ffffff;
+            }
+
+            button:focus {
+                outline: 3px solid rgba(0, 0, 0, 0.5);
+            }
+
+            input {
+
+
+                padding: 8px 10px;
+                font-size: 16px;
+                border: 2px solid #ccc;
+                border-radius: 5px;
+                outline: none;
+                transition: all 0.3s ease-in-out;
+                font-weight: 600;
+                width: 542px;
+            }
+
+            /* Hiệu ứng khi focus */
+            input:focus {
+                border-color: rgba(0, 0, 0, 0.5);
+                /* Đổi màu viền */
+
+            }
+
+            /* Tùy chỉnh placeholder */
+            .custom-input::placeholder {
+                color: #aaa;
+                font-style: italic;
+            }
+        }
+
+        .hero__phone {
+            display: flex;
+            margin-left: 15px;
+            font-weight: 600;
+
+            .hero__phone__text {
+                margin-left: 10px;
+            }
+
+            .hero__phone__icon {
+                font-size: 23px;
+                padding: 4px;
+
+                svg {}
+            }
+        }
+    }
+}
+
+.hero__item {
+
+    background-size: cover;
+    height: 410px;
+    display: flex;
+    align-items: center;
+    padding-left: 75px;
+    background: url("../../../../../assets/users/images/hero/banner.jpg") no-repeat center/cover;
+    width: 100%;
+    border-radius: 10px;
+    margin-left: 24px;
+
+    .hero_text {
+        text-align: center;
+        color: #fff;
+
+        span {
+            font-size: 18px;
+            font-weight: bold;
+            color: #000000;
+            text-transform: uppercase;
+        }
+
+        h2 {
+            font-size: 32px;
+            font-weight: 700;
+            margin: 10px 0;
+            text-transform: uppercase;
+
+            &:nth-child(3) {
+                color: #000000;
+            }
+
+        }
+
+        .primary-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 24px;
+            background: var(--dropdown);
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.2s ease-in-out;
+        }
+
+        .primary-btn:focus {
+            outline: 5px solid rgba(0, 0, 0, 0.5);
+        }
+
     }
 }
